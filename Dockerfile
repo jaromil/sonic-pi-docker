@@ -39,7 +39,7 @@ RUN apt-get install -y -q libqt5opengl5-dev libssl-dev
 
 # fix installation of ruby rugged
 RUN gem install rugged \
-	&& cp -a /var/lib/gems/2.5.0/gems/rugged-0.27.7/. $SRC/app/server/ruby/vendor/rugged \
+	&& cp -a /var/lib/gems/2.5.0/gems/rugged-0.28.2/. $SRC/app/server/ruby/vendor/rugged \
 	&& sed -i 's/rugged-0.26.0/rugged/' $SRC/app/server/ruby/bin/compile-extensions.rb
 
 # comple gui
